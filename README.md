@@ -251,7 +251,172 @@ You must ensure that:
 
 After completing the implementation and verifying that the CD pipeline passes, prepare your final submission.
 
+### Step 1: Commit the Latest Changes
 
+Ensure that all final Docker-related configurations are committed and pushed to your fork.
+
+```bash
+git add .
+
+git commit -m "Final Docker practical submission"
+
+git push origin main
+```
+
+Verify that your latest changes are available in your GitHub fork.
+
+### Step 2: Create a Pull Request
+
+Navigate to your forked repository.
+
+Select:
+
+**Pull Requests → New Pull Request → Compare Across Forks**
+
+Configure the Pull Request as follows:
+
+| Field | Selection |
+|---|---|
+| Base Repository | Instructor's `taskflow-docker` repository |
+| Base Branch | `main` |
+| Head Repository | Your fork of `taskflow-docker` |
+| Compare Branch | `main` |
+
+Create the Pull Request.
+
+**Pull Request Title Format:**
+
+```text
+DOCKER-EXAM | ROLL-NUMBER | STUDENT-NAME | SECTION
+```
+
+Example:
+
+```text
+DOCKER-EXAM | 230101 | Rahul Sharma | AIML-B
+```
+
+### Step 3: Include Submission Details
+
+Your Pull Request description must contain:
+
+```markdown
+## Student Details
+
+- Name:
+- Roll Number:
+- Section:
+- GitHub Username:
+- Docker Hub Username:
+
+## Docker Hub Images
+
+- Frontend Image:
+- Backend Image:
+
+## Application Deployment
+
+- Application URL:
+- Backend Health URL:
+
+## Implementation Checklist
+
+- [ ] Frontend Dockerfile implemented
+- [ ] Backend Dockerfile implemented
+- [ ] docker-compose.yml implemented
+- [ ] docker-compose.deploy.yml implemented
+- [ ] Frontend image published to Docker Hub
+- [ ] Backend image published to Docker Hub
+- [ ] PostgreSQL persistence verified
+- [ ] Redis caching verified
+- [ ] Application functionality tested
+- [ ] CD pipeline passed successfully
+- [ ] Latest changes committed and pushed
+
+## CI/CD Verification
+
+- CD Workflow Run URL:
+- Final Workflow Status:
+
+## Declaration
+
+I confirm that the implementation submitted is my own work and that I have tested the containerized application.
+```
+
+### Step 4: Prepare and Submit PDF Documentation
+
+Every student must prepare a PDF document containing the complete submission details and evidence of successful Docker implementation and CI/CD execution in moodle.
+
+**PDF File Naming Convention:**
+
+`ROLL_NUMBER_STUDENT_NAME.pdf`
+
+**The PDF must contain the following information:**
+
+#### 1. Student Information
+
+- Full Name
+- University Roll Number
+- Section
+- Branch
+- GitHub Username
+
+#### 2. GitHub Submission Details
+
+- GitHub Repository URL (personal fork)
+- GitHub branch used for the implementation
+
+#### 3. Docker Hub Details
+
+- Docker Hub Username
+- Frontend Docker Image URL
+- Backend Docker Image URL
+
+#### 4. CI/CD Execution Evidence
+
+Include clear screenshots demonstrating the successful execution of all CI/CD stages.
+
+The screenshots must cover:
+
+- GitHub Actions workflow execution.
+- Docker Hub authentication.
+- Backend Docker image build and publishing.
+- Frontend Docker image build and publishing.
+- Docker Compose image pull.
+- Application deployment.
+- Backend health check.
+- Frontend accessibility verification.
+- Final successful CI/CD pipeline status.
+- Instructor CI evaluation results, if available.
+
+#### 5. Declaration
+
+Include the following declaration at the end of the PDF:
 
 "I hereby declare that the submitted Docker implementation is my own work. I have successfully executed and verified the required CI/CD pipeline stages, published the Docker images to my Docker Hub account, and tested the application deployment."
 
+**Submission Instructions:**
+
+1. Save the completed documentation as a PDF.
+2. Attach the PDF to your final Pull Request.
+3. Ensure that all screenshots are readable and clearly demonstrate successful execution.
+4. Verify that all repository URLs and Docker Hub image URLs are accessible.
+
+**Important:** Submission of the PDF documentation is mandatory. Incomplete documentation or missing CI/CD execution screenshots may result in deduction of marks.
+---
+
+
+## 6. Important Instructions
+
+1. The application source code is provided. You are required to implement the Docker and deployment configurations.
+2. Do not remove or alter existing application functionality to bypass evaluation.
+3. Do not hardcode credentials, passwords or access tokens in Dockerfiles or Compose files.
+4. Each student must use their own GitHub and Docker Hub accounts.
+5. Docker Hub repositories must contain the images corresponding to the submitted application.
+6. Your application must work using the published images, without relying on local frontend or backend builds.
+7. Do not submit an incomplete or untested implementation.
+8. The final Pull Request must contain your latest committed changes.
+9. The instructor's CI evaluation must be allowed to execute against your Pull Request.
+10. Be prepared to explain your Dockerfiles, networking, volumes, environment variables, image publishing and CI/CD workflow during the viva.
+
+**Final Submission:** Your examination submission is considered complete only when your Docker implementation is pushed to your GitHub fork, the required CD stages have passed, and the final Pull Request has been created successfully.
